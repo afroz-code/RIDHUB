@@ -1,0 +1,41 @@
+RIDE HUB — ADMIN DASHBOARD
+==========================
+
+The Admin Dashboard button is visible only after an account has the admin role.
+
+IMPORTANT:
+Your account must have role = 'admin' to load admin information.
+
+1. Register an account on RIDE HUB.
+2. Open MySQL.
+3. Run:
+
+   USE ridehub;
+   UPDATE users SET role='admin' WHERE email='YOUR_EMAIL';
+
+4. Logout from RIDE HUB.
+5. Login again.
+6. Click ADMIN DASHBOARD.
+
+The Admin Dashboard shows:
+- Total registered users
+- Total bikes
+- Total events
+- Total community posts
+- Registered user name, email, role and city
+- Create event form
+
+If the Admin page says "Admin access required", the SQL role update has not been applied to the logged-in account.
+
+Default API:
+http://localhost:5000
+
+Default frontend:
+http://localhost:5173
+
+
+SEPARATE ADMIN PORTAL
+After starting client and server, open:
+http://localhost:5173/admin.html
+
+Admin dashboard is separate from the main rider website. Use an account whose MySQL role is admin.
